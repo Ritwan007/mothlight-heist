@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOTHLIGHT — The Lantern Archive Heist</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="frame">
+    <header id="topbar">
+      <div class="brand">MOTHLIGHT <span>· the Lantern Archive heist</span></div>
+      <div class="stats">
+        <span id="emberStat" title="Glow-embers stolen">Embers <b id="emberCount">0 / 5</b></span>
+        <span id="lanternStat" title="Lanterns still burning">Lanterns <b id="lanternCount">9</b></span>
+        <span id="timeStat" title="Time in the archive">Time <b id="timeCount">0:00</b></span>
+      </div>
+    </header>
+    <div id="stage">
+      <canvas id="game" width="960" height="640"></canvas>
+      <div id="suspicionWrap" title="How close the Wardens are to raising the alarm">
+        <div id="suspicionLabel">SUSPICION</div>
+        <div id="suspicionBar"><div id="suspicionFill"></div></div>
+        <div id="alarmState">UNSEEN</div>
+      </div>
+      <div id="toast"></div>
+      <div id="objective">Steal 5 glow-embers, then slip out through the moonlit window.</div>
+    </div>
+    <footer id="helpbar">
+      <span><b>WASD / arrows</b> fly</span>
+      <span><b>Shift</b> sneak (slow, quiet, harder to spot)</span>
+      <span><b>E / click a lantern</b> snuff it — make shadow</span>
+      <span><b>P</b> pause</span>
+      <span><b>M</b> sound on/off</span>
+      <span class="hint">Light exposes you. Shadow hides you. A snuffed lantern makes Wardens suspicious.</span>
+    </footer>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

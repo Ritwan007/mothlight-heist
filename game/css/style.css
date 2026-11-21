@@ -1,0 +1,142 @@
+/* MOTHLIGHT page chrome: dark archive tones, warm lantern amber accents. */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0d0a14;
+  color: #e8ddc4;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+#frame {
+  width: 1000px;
+  margin: 14px auto 24px;
+}
+
+#topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 4px 10px;
+  border-bottom: 1px solid #3a2f4a;
+}
+
+.brand {
+  font-size: 26px;
+  letter-spacing: 4px;
+  color: #ffd98a;
+  text-shadow: 0 0 14px rgba(255, 190, 90, 0.45);
+}
+
+.brand span {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #b9a684;
+  text-shadow: none;
+}
+
+.stats span {
+  margin-left: 18px;
+  font-size: 14px;
+  color: #b9a684;
+}
+
+.stats b { color: #ffe9b0; font-size: 16px; }
+
+#stage {
+  position: relative;
+  width: 960px;
+  margin: 12px auto 0;
+  border: 1px solid #4a3a5e;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7), 0 0 60px rgba(255, 190, 90, 0.06);
+  background: #14101d;
+}
+
+#game { display: block; width: 960px; height: 640px; }
+
+#suspicionWrap {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 260px;
+  background: rgba(10, 7, 16, 0.78);
+  border: 1px solid #4a3a5e;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+#suspicionLabel {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #b9a684;
+}
+
+#suspicionBar {
+  height: 10px;
+  margin-top: 5px;
+  background: #241c31;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#suspicionFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7fb069, #e8c85a, #e05a4e);
+  transition: width 0.15s linear;
+}
+
+#alarmState {
+  margin-top: 5px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #9fd08a;
+}
+
+#alarmState.hot { color: #ffb347; }
+#alarmState.alarm { color: #ff6b5e; }
+
+#toast {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #ffe9b0;
+  text-shadow: 0 2px 8px #000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#objective {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  max-width: 330px;
+  text-align: right;
+  font-size: 13px;
+  font-style: italic;
+  color: #cfc0a0;
+  text-shadow: 0 1px 4px #000;
+  pointer-events: none;
+}
+
+#helpbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 10px;
+  padding: 8px 4px;
+  font-size: 13px;
+  color: #a99a78;
+  border-top: 1px solid #2c2340;
+}
+
+#helpbar b { color: #e8ddc4; }
+#helpbar .hint { color: #8d7fb0; font-style: italic; }
